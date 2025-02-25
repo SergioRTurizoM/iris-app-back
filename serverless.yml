@@ -7,7 +7,13 @@ provider:
   environment:
     TODO_TABLE: IrisTodoTable
     JWT_SECRET: iris-todo-app
-
+  iamRoleStatements:
+      - Effect: Allow
+        Action:
+          - dynamodb:*
+        Resource:
+          - arn:aws:dynamodb:us-east-1:047025251175:table/Users
+          - arn:aws:dynamodb:us-east-1:047025251175:table/IrisTodoTable
 plugins:
   - serverless-offline
 

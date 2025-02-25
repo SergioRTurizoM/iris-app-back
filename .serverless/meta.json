@@ -108,7 +108,7 @@
               "Properties": {
                 "Code": {
                   "S3Bucket": "serverless-framework-deployments-us-east-1-87efe765-f148",
-                  "S3Key": "serverless/iris-back/dev/1740516680284-2025-02-25T20:51:20.284Z/iris-back.zip"
+                  "S3Key": "serverless/iris-back/dev/1740517893047-2025-02-25T21:11:33.047Z/iris-back.zip"
                 },
                 "Handler": "dist/main.handler",
                 "Runtime": "nodejs18.x",
@@ -132,14 +132,14 @@
                 "ApiLogGroup"
               ]
             },
-            "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo": {
+            "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4": {
               "Type": "AWS::Lambda::Version",
               "DeletionPolicy": "Retain",
               "Properties": {
                 "FunctionName": {
                   "Ref": "ApiLambdaFunction"
                 },
-                "CodeSha256": "rO40NZtead8feLdDYo9/UvN4Z2hdsey++E/3p86rAH0="
+                "CodeSha256": "5IJTmjMtqE5t7sbZzucM/Z2Lzrgy8vxayNbcKcLJOeA="
               }
             },
             "ApiGatewayRestApi": {
@@ -284,7 +284,7 @@
                 "ApiLambdaPermissionApiGateway"
               ]
             },
-            "ApiGatewayDeployment1740516670058": {
+            "ApiGatewayDeployment1740517882599": {
               "Type": "AWS::ApiGateway::Deployment",
               "Properties": {
                 "RestApiId": {
@@ -387,7 +387,7 @@
             "ApiLambdaFunctionQualifiedArn": {
               "Description": "Current Lambda function version",
               "Value": {
-                "Ref": "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo"
+                "Ref": "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4"
               },
               "Export": {
                 "Name": "sls-iris-back-dev-ApiLambdaFunctionQualifiedArn"
@@ -461,7 +461,7 @@
           "timeout": 6,
           "runtime": "nodejs18.x",
           "vpc": {},
-          "versionLogicalId": "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo"
+          "versionLogicalId": "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4"
         }
       },
       "resources": {
@@ -620,7 +620,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-87efe765-f148",
-                "S3Key": "serverless/iris-back/dev/1740516680284-2025-02-25T20:51:20.284Z/iris-back.zip"
+                "S3Key": "serverless/iris-back/dev/1740517893047-2025-02-25T21:11:33.047Z/iris-back.zip"
               },
               "Handler": "dist/main.handler",
               "Runtime": "nodejs18.x",
@@ -644,14 +644,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo": {
+          "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "rO40NZtead8feLdDYo9/UvN4Z2hdsey++E/3p86rAH0="
+              "CodeSha256": "5IJTmjMtqE5t7sbZzucM/Z2Lzrgy8vxayNbcKcLJOeA="
             }
           },
           "ApiGatewayRestApi": {
@@ -796,7 +796,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1740516670058": {
+          "ApiGatewayDeployment1740517882599": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -899,7 +899,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo"
+              "Ref": "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4"
             },
             "Export": {
               "Name": "sls-iris-back-dev-ApiLambdaFunctionQualifiedArn"
@@ -949,7 +949,8 @@
       "deploy"
     ],
     "options": {
-      "stage": "dev"
+      "stage": "dev",
+      "force": true
     },
     "orgId": "96b63550-43a7-469a-baeb-71878e0b10f6",
     "orgName": "0553689",
@@ -959,12 +960,12 @@
     "serviceProviderAwsCfStackName": "iris-back-dev",
     "serviceProviderAwsCfStackId": "arn:aws:cloudformation:us-east-1:047025251175:stack/iris-back-dev/1f5100e0-f36a-11ef-9af8-0affd196613d",
     "serviceProviderAwsCfStackCreated": "2025-02-25T11:17:39.072Z",
-    "serviceProviderAwsCfStackUpdated": "2025-02-25T20:41:16.257Z",
+    "serviceProviderAwsCfStackUpdated": "2025-02-25T20:57:29.824Z",
     "serviceProviderAwsCfStackStatus": "UPDATE_COMPLETE",
     "serviceProviderAwsCfStackOutputs": [
       {
         "OutputKey": "ApiLambdaFunctionQualifiedArn",
-        "OutputValue": "arn:aws:lambda:us-east-1:047025251175:function:iris-back-dev-api:18",
+        "OutputValue": "arn:aws:lambda:us-east-1:047025251175:function:iris-back-dev-api:20",
         "Description": "Current Lambda function version",
         "ExportName": "sls-iris-back-dev-ApiLambdaFunctionQualifiedArn"
       },
@@ -1073,7 +1074,7 @@
           "Properties": {
             "Code": {
               "S3Bucket": "serverless-framework-deployments-us-east-1-87efe765-f148",
-              "S3Key": "serverless/iris-back/dev/1740516680284-2025-02-25T20:51:20.284Z/iris-back.zip"
+              "S3Key": "serverless/iris-back/dev/1740517893047-2025-02-25T21:11:33.047Z/iris-back.zip"
             },
             "Handler": "dist/main.handler",
             "Runtime": "nodejs18.x",
@@ -1097,14 +1098,14 @@
             "ApiLogGroup"
           ]
         },
-        "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo": {
+        "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4": {
           "Type": "AWS::Lambda::Version",
           "DeletionPolicy": "Retain",
           "Properties": {
             "FunctionName": {
               "Ref": "ApiLambdaFunction"
             },
-            "CodeSha256": "rO40NZtead8feLdDYo9/UvN4Z2hdsey++E/3p86rAH0="
+            "CodeSha256": "5IJTmjMtqE5t7sbZzucM/Z2Lzrgy8vxayNbcKcLJOeA="
           }
         },
         "ApiGatewayRestApi": {
@@ -1249,7 +1250,7 @@
             "ApiLambdaPermissionApiGateway"
           ]
         },
-        "ApiGatewayDeployment1740516670058": {
+        "ApiGatewayDeployment1740517882599": {
           "Type": "AWS::ApiGateway::Deployment",
           "Properties": {
             "RestApiId": {
@@ -1352,7 +1353,7 @@
         "ApiLambdaFunctionQualifiedArn": {
           "Description": "Current Lambda function version",
           "Value": {
-            "Ref": "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo"
+            "Ref": "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4"
           },
           "Export": {
             "Name": "sls-iris-back-dev-ApiLambdaFunctionQualifiedArn"

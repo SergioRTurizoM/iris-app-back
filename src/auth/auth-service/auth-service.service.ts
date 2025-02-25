@@ -8,7 +8,7 @@ import {
 import { User } from 'src/common/interfaces/users.interface';
 import { CreateUserDto } from '../dto/create-auth.dto';
 import { v4 as uuid } from 'uuid';
-import * as bcrypt from 'bcrypt';
+import * as bcrypt from 'bcryptjs';
 
 @Injectable()
 export class AuthService {
