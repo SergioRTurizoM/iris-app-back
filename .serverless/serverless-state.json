@@ -107,7 +107,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-87efe765-f148",
-                "S3Key": "serverless/iris-back/dev/1740505269219-2025-02-25T17:41:09.219Z/iris-back.zip"
+                "S3Key": "serverless/iris-back/dev/1740516680284-2025-02-25T20:51:20.284Z/iris-back.zip"
               },
               "Handler": "dist/main.handler",
               "Runtime": "nodejs18.x",
@@ -131,14 +131,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionwGOdlaBwJENu0dXtdtFxTNDZlDYLbVTY9M2O63YYg": {
+          "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "TpN0eggOoRs3LfrrQny7CXJQxP5+p4YIP0SewnGT7fo="
+              "CodeSha256": "rO40NZtead8feLdDYo9/UvN4Z2hdsey++E/3p86rAH0="
             }
           },
           "ApiGatewayRestApi": {
@@ -283,7 +283,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1740505257629": {
+          "ApiGatewayDeployment1740516670058": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -386,7 +386,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionwGOdlaBwJENu0dXtdtFxTNDZlDYLbVTY9M2O63YYg"
+              "Ref": "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo"
             },
             "Export": {
               "Name": "sls-iris-back-dev-ApiLambdaFunctionQualifiedArn"
@@ -466,7 +466,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionwGOdlaBwJENu0dXtdtFxTNDZlDYLbVTY9M2O63YYg"
+        "versionLogicalId": "ApiLambdaVersionbPNT4MI3BBCQqf9iRZipSqzpvntpwIP9jXS4L2h6SNo"
       }
     },
     "resources": {
@@ -542,7 +542,7 @@
     "artifact": "/Users/sergiorturizom/Programacion/iris/iris-back/.serverless/iris-back.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/iris-back/dev/1740505269219-2025-02-25T17:41:09.219Z",
+    "artifactDirectoryName": "serverless/iris-back/dev/1740516680284-2025-02-25T20:51:20.284Z",
     "artifact": "iris-back.zip"
   }
 }
