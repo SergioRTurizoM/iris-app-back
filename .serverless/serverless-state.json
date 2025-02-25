@@ -12,6 +12,18 @@
         "TODO_TABLE": "IrisTodoTable",
         "JWT_SECRET": "iris-todo-app"
       },
+      "iamRoleStatements": [
+        {
+          "Effect": "Allow",
+          "Action": [
+            "dynamodb:*"
+          ],
+          "Resource": [
+            "arn:aws:dynamodb:us-east-1:047025251175:table/Users",
+            "arn:aws:dynamodb:us-east-1:047025251175:table/IrisTodoTable"
+          ]
+        }
+      ],
       "stage": "dev",
       "versionFunctions": true,
       "compiledCloudFormationTemplate": {
@@ -81,6 +93,9 @@
                             "Fn::Sub": "arn:${AWS::Partition}:logs:${AWS::Region}:${AWS::AccountId}:log-group:/aws/lambda/iris-back-dev*:*:*"
                           }
                         ]
+                      },
+                      {
+                        "$ref": "$[\"service\"][\"provider\"][\"iamRoleStatements\"][0]"
                       }
                     ]
                   }
@@ -107,7 +122,7 @@
             "Properties": {
               "Code": {
                 "S3Bucket": "serverless-framework-deployments-us-east-1-87efe765-f148",
-                "S3Key": "serverless/iris-back/dev/1740517893047-2025-02-25T21:11:33.047Z/iris-back.zip"
+                "S3Key": "serverless/iris-back/dev/1740518204426-2025-02-25T21:16:44.426Z/iris-back.zip"
               },
               "Handler": "dist/main.handler",
               "Runtime": "nodejs18.x",
@@ -131,14 +146,14 @@
               "ApiLogGroup"
             ]
           },
-          "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4": {
+          "ApiLambdaVersiondCUsgLGKIrrbRMS9i50cSzsPgWG3NeIykAE7Mzcej0s": {
             "Type": "AWS::Lambda::Version",
             "DeletionPolicy": "Retain",
             "Properties": {
               "FunctionName": {
                 "Ref": "ApiLambdaFunction"
               },
-              "CodeSha256": "5IJTmjMtqE5t7sbZzucM/Z2Lzrgy8vxayNbcKcLJOeA="
+              "CodeSha256": "sLeLslDDlfUtQyuzFVKpT6aEfewGMfnKrP8SYCSo8iw="
             }
           },
           "ApiGatewayRestApi": {
@@ -283,7 +298,7 @@
               "ApiLambdaPermissionApiGateway"
             ]
           },
-          "ApiGatewayDeployment1740517882599": {
+          "ApiGatewayDeployment1740518193924": {
             "Type": "AWS::ApiGateway::Deployment",
             "Properties": {
               "RestApiId": {
@@ -386,7 +401,7 @@
           "ApiLambdaFunctionQualifiedArn": {
             "Description": "Current Lambda function version",
             "Value": {
-              "Ref": "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4"
+              "Ref": "ApiLambdaVersiondCUsgLGKIrrbRMS9i50cSzsPgWG3NeIykAE7Mzcej0s"
             },
             "Export": {
               "Name": "sls-iris-back-dev-ApiLambdaFunctionQualifiedArn"
@@ -466,7 +481,7 @@
         "timeout": 6,
         "runtime": "nodejs18.x",
         "vpc": {},
-        "versionLogicalId": "ApiLambdaVersionZnijARl558TH47eT46VrOp0YdX0HnRFNWzEIOMPFW4"
+        "versionLogicalId": "ApiLambdaVersiondCUsgLGKIrrbRMS9i50cSzsPgWG3NeIykAE7Mzcej0s"
       }
     },
     "resources": {
@@ -542,7 +557,7 @@
     "artifact": "/Users/sergiorturizom/Programacion/iris/iris-back/.serverless/iris-back.zip"
   },
   "package": {
-    "artifactDirectoryName": "serverless/iris-back/dev/1740517893047-2025-02-25T21:11:33.047Z",
+    "artifactDirectoryName": "serverless/iris-back/dev/1740518204426-2025-02-25T21:16:44.426Z",
     "artifact": "iris-back.zip"
   }
 }

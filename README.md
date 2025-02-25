@@ -51,3 +51,8 @@ Authorization: Bearer <token>
 ```bash
 https://documenter.getpostman.com/view/20774465/2sAYdeMsE9
 ```
+
+### RESPUESTAS COMPONENTE TEORICO
+
+LINK: https://drive.google.com/file/d/1MvVKcWPjA7RG7alP_Hp8e_b4SqAIBOw6/view?usp=sharing
+
